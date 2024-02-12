@@ -5,9 +5,10 @@
     <classes>
       <class name="TestCases.QALegendTestCases">
         <methods>
-          <include name="clockInOrOutMembers"/>
           <include name="applyLeave"/>
+          <include name="clockInOrOutMembers"/>
           <include name="initialization"/>
+          <include name="tearDown"/>
           <include name="addEvent"/>
           <include name="projectStatusDropdown"/>
           <include name="addItems"/>

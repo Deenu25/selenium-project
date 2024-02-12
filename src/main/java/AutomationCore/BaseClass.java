@@ -1,27 +1,20 @@
 package AutomationCore;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import com.google.common.io.Files;
-import com.mongodb.MapReduceCommand.OutputType;
-
-
 
 public class BaseClass {
 	public WebDriver driver;
 	
-	
+   
 public	final String excelFilePath="//src//main//java//TestData//TestData_Excel.xlsx";
 	
 	public WebDriver browserIntialization(String browserName) throws Exception
@@ -47,6 +40,7 @@ public	final String excelFilePath="//src//main//java//TestData//TestData_Excel.x
 		return driver;
 		
 	}
+	
 	
 	public String getScreenShotPath(String testCaseName, WebDriver driver) throws IOException
 	{

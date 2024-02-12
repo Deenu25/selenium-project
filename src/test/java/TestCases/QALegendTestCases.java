@@ -1,26 +1,17 @@
 package TestCases;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
+import org.testng.Assert;
 import org.testng.AssertJUnit;
 import java.awt.AWTException;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.Properties;
 
-import org.apache.poi.sl.usermodel.Placeholder;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
-
-import com.mongodb.internal.connection.ReplyMessage;
-
 import AutomationCore.BaseClass;
 import PageClasses.QALegend_AnnouncementPage;
 import PageClasses.QALegend_EventPage;
@@ -34,31 +25,29 @@ import PageClasses.QALegend_TicketPage;
 import PageClasses.QALegend_TimeCards;
 import Utilities.ExcelUtility;
 import Utilities.FakerUtility;
-import Utilities.PageUtility;
 
 
 public class QALegendTestCases extends BaseClass {
     public WebDriver driver;
     FileInputStream fis;
-	public Properties prop;
-	public QALegend_LoginPage login_Page;
-	public QALegend_HomePage home_Page;
-	public QALegend_EventPage event_Page;
-	public QALegend_FinancePage finance_Page;
-	public QALegend_ProjectPage project_Page;
-	public QALegend_ItemsPage item_Page;
-	public QALegend_TimeCards timecards_Page;
-	public QALegend_TicketPage ticket_Page;
-	public QALegend_LeavePage leave_Page;
-	public QALegend_AnnouncementPage announcement_Page;
-    
-
-    @BeforeMethod
+	 Properties prop;
+	 QALegend_LoginPage login_Page;
+	 QALegend_HomePage home_Page;
+	 QALegend_EventPage event_Page;
+	 QALegend_FinancePage finance_Page;
+	 QALegend_ProjectPage project_Page;
+	 QALegend_ItemsPage item_Page;
+	 QALegend_TimeCards timecards_Page;
+	 QALegend_TicketPage ticket_Page;
+	 QALegend_LeavePage leave_Page;
+	 QALegend_AnnouncementPage announcement_Page;
+	
+	 @BeforeMethod
     @Parameters({"Browser"})
     public void initialization(String browser) throws Exception {
         driver = browserIntialization(browser);
         prop = new Properties();
-        fis = new FileInputStream("C:\\Users\\Administrator\\git\\QALegend\\QALegend\\src\\main\\java\\TestData\\Testdata.properties");
+        fis = new FileInputStream("C:\\Users\\Administrator\\eclipse-workspace\\QALegend\\src\\main\\java\\TestData\\Testdata.properties");
         prop.load(fis);
         driver.get(prop.getProperty("url"));
         login_Page = new QALegend_LoginPage(driver);
@@ -77,7 +66,7 @@ public class QALegendTestCases extends BaseClass {
         login_Page.enterPassword(prop.getProperty("password"));
         login_Page.clickLoginButton();
 	}
-       
+    
         
     @Test(priority = 1,groups = {"Regression"})
     public void loginCRM() {
@@ -85,7 +74,7 @@ public class QALegendTestCases extends BaseClass {
         login_Page.enterUserName(prop.getProperty("username"));
         login_Page.enterPassword(prop.getProperty("password"));
         login_Page.clickLoginButton();
-        AssertJUnit.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
+        Assert.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
     }
     @Test(priority = 8,groups = {"Smoketest"})
     public void addEvent() throws IOException, InterruptedException {
@@ -93,7 +82,7 @@ public class QALegendTestCases extends BaseClass {
 //    	login_Page.enterUserName(prop.getProperty("username"));
 //        login_Page.enterPassword(prop.getProperty("password"));
 //        login_Page.clickLoginButton();
-//        org.testng.Assert.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
+//        Assert.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
    
     home_Page.clickOnEventTab();
     event_Page.clickOnAddEvent();
@@ -109,7 +98,7 @@ public class QALegendTestCases extends BaseClass {
     event_Page.selectShareWith();
     event_Page.tickCheckBoxRepeat();
     event_Page.clickOnSave();
-   AssertJUnit.assertEquals(event_Page.getTitleOfThePage(),prop.getProperty("eventCalendarTitle"));
+   Assert.assertEquals(event_Page.getTitleOfThePage(),prop.getProperty("eventCalendarTitle"));
     
     }
     
@@ -119,13 +108,13 @@ public class QALegendTestCases extends BaseClass {
         login_Page.enterUserName(prop.getProperty("username"));
         login_Page.enterPassword(prop.getProperty("password"));
         login_Page.clickLoginButton();
-        AssertJUnit.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
+        Assert.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
         Thread.sleep(2000);
         home_Page.clickOnChatBox();
         home_Page.clickOnSenderMessage();
         home_Page.getReplyMessage(prop.getProperty("replyMessage"));
         home_Page.pressEnterKey();
-        AssertJUnit.assertEquals(home_Page.displayRepliedMessage("placeholder"),prop.getProperty("placeholdervalue"));
+        Assert.assertEquals(home_Page.displayRepliedMessage("placeholder"),prop.getProperty("placeholdervalue"));
         
             }
     @Test(priority = 9,groups = {"Smoketest"})
@@ -134,7 +123,7 @@ public class QALegendTestCases extends BaseClass {
         login_Page.enterUserName(prop.getProperty("username"));
         login_Page.enterPassword(prop.getProperty("password"));
         login_Page.clickLoginButton();
-        AssertJUnit.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
+        Assert.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
         Thread.sleep(2000);
         home_Page.clickOnFinance();
         home_Page.clickOnIncomeVsExpenses();
@@ -146,7 +135,7 @@ public class QALegendTestCases extends BaseClass {
         Thread.sleep(2000);
         finance_Page.clickOnPrintSummary();
         finance_Page.printView();
-        AssertJUnit.assertEquals(finance_Page.getTextVisible(),prop.getProperty("textvisible"));
+        Assert.assertEquals(finance_Page.getTextVisible(),prop.getProperty("textvisible"));
         }
     @Test(priority = 3,groups = {"Regression"})
     public void projectStatusDropdown() throws InterruptedException {
@@ -154,13 +143,13 @@ public class QALegendTestCases extends BaseClass {
         login_Page.enterUserName(prop.getProperty("username"));
         login_Page.enterPassword(prop.getProperty("password"));
         login_Page.clickLoginButton();
-        AssertJUnit.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
+        Assert.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
         Thread.sleep(2000);
         home_Page.clickOnProject();
         project_Page.clickOnProjectStatus();
         project_Page.clickOnCompletedProject();
         project_Page.clickOnExcel();
-        AssertJUnit.assertEquals(project_Page.displayProjectText(),prop.getProperty("projectText"));
+        Assert.assertEquals(project_Page.displayProjectText(),prop.getProperty("projectText"));
         }
     @Test(priority = 4,groups = {"Smoketest"})
     public void addItems() throws InterruptedException { 
@@ -168,7 +157,7 @@ public class QALegendTestCases extends BaseClass {
         login_Page.enterUserName(prop.getProperty("username"));
         login_Page.enterPassword(prop.getProperty("password"));
         login_Page.clickLoginButton();
-        AssertJUnit.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
+        Assert.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
         Thread.sleep(2000);
         home_Page.clickOnItemsTab();
         item_Page.clickOnAddItems();
@@ -178,7 +167,7 @@ public class QALegendTestCases extends BaseClass {
         item_Page.enterItemRateField(prop.getProperty("enterItemRate"));
         Thread.sleep(2000);
         item_Page.pressSaveButton();
-        AssertJUnit.assertEquals(item_Page.displayItem(),prop.getProperty("itemView"));
+        Assert.assertEquals(item_Page.displayItem(),prop.getProperty("itemView"));
         }   
     
     @Test(priority = 10,groups = {"Regression"})
@@ -187,14 +176,14 @@ public class QALegendTestCases extends BaseClass {
         login_Page.enterUserName(prop.getProperty("username"));
         login_Page.enterPassword(prop.getProperty("password"));
         login_Page.clickLoginButton();
-        AssertJUnit.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
+        Assert.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
        
         home_Page.clickOnTimeCards();
         Thread.sleep(2000);
         timecards_Page.clickOnClockInOrOut();
         timecards_Page.clickOnStatusOfKeerthana();
         timecards_Page.getTotalWorkHours();
-        AssertJUnit.assertEquals(timecards_Page.getTotalWorkHours(),prop.getProperty("totalWorkHours"));
+        Assert.assertEquals(timecards_Page.getTotalWorkHours(),prop.getProperty("totalWorkHours"));
         
 }
     @Test(priority = 5,groups = {"Smoketest"})
@@ -203,7 +192,7 @@ public class QALegendTestCases extends BaseClass {
         login_Page.enterUserName(prop.getProperty("username"));
         login_Page.enterPassword(prop.getProperty("password"));
         login_Page.clickLoginButton();
-        AssertJUnit.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
+        Assert.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
          
         home_Page.clickOnTicketsTab();
         ticket_Page.clickOnAddTickets();
@@ -218,7 +207,7 @@ public class QALegendTestCases extends BaseClass {
         Thread.sleep(2000);
         ticket_Page.fileUpload(prop.getProperty("filePath"));
         ticket_Page.clickSaveButton();
-        AssertJUnit.assertEquals(ticket_Page.openStatus(),prop.getProperty("statusOpen"));
+        Assert.assertEquals(ticket_Page.openStatus(),prop.getProperty("statusOpen"));
 }
     @Test(priority = 7,groups = {"Regression"})
     public void applyLeave() throws InterruptedException {
@@ -226,7 +215,7 @@ public class QALegendTestCases extends BaseClass {
     	login_Page.enterUserName(prop.getProperty("username"));
         login_Page.enterPassword(prop.getProperty("password"));
         login_Page.clickLoginButton();
-        AssertJUnit.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
+        Assert.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
         Thread.sleep(2000);
         home_Page.clickOnLeaveTab();
         leave_Page.clickOnApplyLeave();
@@ -237,7 +226,7 @@ public class QALegendTestCases extends BaseClass {
         leave_Page.clickOnSelectDate();
         leave_Page.enterReasonForLeave();
         leave_Page.clickOnApplyLeaveButton();
-        AssertJUnit.assertEquals(leave_Page.leaveTextDisplay(),prop.getProperty("leaveView"));
+        Assert.assertEquals(leave_Page.leaveTextDisplay(),prop.getProperty("leaveView"));
    
         
 }
@@ -247,7 +236,7 @@ public class QALegendTestCases extends BaseClass {
     	login_Page.enterUserName(prop.getProperty("username"));
         login_Page.enterPassword(prop.getProperty("password"));
         login_Page.clickLoginButton();
-        AssertJUnit.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
+        Assert.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
         Thread.sleep(2000);
         home_Page.clickOnannouncementTab();
         announcement_Page.clickOnAddAnnouncement();
@@ -263,6 +252,12 @@ public class QALegendTestCases extends BaseClass {
         announcement_Page.uploadFile(prop.getProperty("filePath"));
         announcement_Page.clickOnAlert();
         announcement_Page.clickSave();
-        AssertJUnit.assertEquals(announcement_Page.displayEditAnnouncement(),prop.getProperty("editAnnouncement"));
-        }}
+        Assert.assertEquals(announcement_Page.displayEditAnnouncement(),prop.getProperty("editAnnouncement"));
+        }
 
+
+@AfterMethod
+public void tearDown() {
+	driver.quit();
+}
+}
