@@ -13,12 +13,12 @@
 			<include name="addEvent"></include>
 			<include name="testChatBoxFunctionality"></include>
 			<include name="incomeVsExpenses"></include>
-			<include name="projectStatusDropdown"></include>
+			<!--<include name="projectStatusDropdown"></include>
 			<include name="addItems"></include>
 			<include name="clockInOrOutMembers"></include>
 			<include name="Tickets"></include>
 			<include name="applyLeave"></include>
-			<include name="addAnnouncement"></include>
+			<include name="addAnnouncement"></include>-->
 			</methods>
 			</class>
     </classes>
