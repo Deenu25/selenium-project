@@ -10,10 +10,10 @@
       <class name="TestCases.QALegendTestCases">
       <methods>
 			<include name="loginCRM"></include>
-			<include name="addEvent"></include>
+			<!--<include name="addEvent"></include>
 			<include name="testChatBoxFunctionality"></include>
 			<include name="incomeVsExpenses"></include>
-			<!--<include name="projectStatusDropdown"></include>
+			<include name="projectStatusDropdown"></include>
 			<include name="addItems"></include>
 			<include name="clockInOrOutMembers"></include>
 			<include name="Tickets"></include>

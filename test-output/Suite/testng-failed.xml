@@ -14,13 +14,8 @@
           <include name="initialization"/>
           <include name="tearDown"/>
           <include name="addEvent"/>
-          <include name="projectStatusDropdown"/>
-          <include name="addItems"/>
           <include name="addAnnouncement"/>
-          <include name="loginCRM"/>
           <include name="incomeVsExpenses"/>
-          <include name="testChatBoxFunctionality"/>
-          <include name="Tickets"/>
         </methods>
       </class> <!-- TestCases.QALegendTestCases -->
     </classes>
