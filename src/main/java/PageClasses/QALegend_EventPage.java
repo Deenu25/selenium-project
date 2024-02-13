@@ -36,7 +36,7 @@ public class QALegend_EventPage {
     
 	
 	
-	@FindBy(xpath = "//label[text()='All team members']")
+	@FindBy(name = "share_with")
 	WebElement shareWith;
 	@FindBy(xpath = "//label[text()='Repeat']")
 	WebElement repeat;

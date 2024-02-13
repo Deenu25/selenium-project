@@ -47,6 +47,7 @@ public class QALegendTestCases extends BaseClass {
     public void initialization(String browser) throws Exception {
         driver = browserIntialization(browser);
         prop = new Properties();
+        driver.manage().window().maximize();
         fis = new FileInputStream("C:\\Users\\Administrator\\eclipse-workspace\\QALegend\\src\\main\\java\\TestData\\Testdata.properties");
         prop.load(fis);
         driver.get(prop.getProperty("url"));
@@ -78,11 +79,11 @@ public class QALegendTestCases extends BaseClass {
     }
     @Test(priority = 8,groups = {"Smoketest"})
     public void addEvent() throws IOException, InterruptedException {
-//    	home_Page.logOut();
-//    	login_Page.enterUserName(prop.getProperty("username"));
-//        login_Page.enterPassword(prop.getProperty("password"));
-//        login_Page.clickLoginButton();
-//        Assert.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
+    	home_Page.logOut();
+    	login_Page.enterUserName(prop.getProperty("username"));
+        login_Page.enterPassword(prop.getProperty("password"));
+        login_Page.clickLoginButton();
+        Assert.assertEquals(home_Page.getUserProfileName(), prop.getProperty("userProfileName"));
    
     home_Page.clickOnEventTab();
     event_Page.clickOnAddEvent();
@@ -113,6 +114,7 @@ public class QALegendTestCases extends BaseClass {
         home_Page.clickOnChatBox();
         home_Page.clickOnSenderMessage();
         home_Page.getReplyMessage(prop.getProperty("replyMessage"));
+        Thread.sleep(2000);
         home_Page.pressEnterKey();
         Assert.assertEquals(home_Page.displayRepliedMessage("placeholder"),prop.getProperty("placeholdervalue"));
         

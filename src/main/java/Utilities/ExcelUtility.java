@@ -2,6 +2,7 @@ package Utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -36,6 +37,21 @@ public class ExcelUtility {
 		 
 	 }
 	 
-	}
+	 public static ArrayList<String> getString(String filePath,String sheet) throws IOException {
+		 f =new FileInputStream(System.getProperty("user.dir")+ filePath);
+		 wb = new XSSFWorkbook(f);
+		 sh = wb.getSheet(sheet);
+		 ArrayList<String>excelrows=new ArrayList<String>();
+		 int rowcount=sh.getLastRowNum()-sh.getFirstRowNum();
+		 for(int i=0;i<=rowcount;i++) {
+			 Row row=sh.getRow(i);
+			 int cellcount=row.getLastCellNum();
+			 for(int j=0;j<=cellcount;j++) {
+				 excelrows.add(row.getCell(j).getStringCellValue());
+			 }
+		 }
+		 return excelrows;
+	 }
+}
 
 
