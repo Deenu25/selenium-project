@@ -18,7 +18,7 @@
 			<include name="clockInOrOutMembers"></include>
 			<include name="Tickets"></include>
 			<include name="applyLeave"></include>
-			<include name="addAnnouncement"></include>
+			<!--<include name="addAnnouncement"></include>-->
 			</methods>
 			</class>
     </classes>
