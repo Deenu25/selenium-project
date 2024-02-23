@@ -6,9 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtility;
+import Utilities.WaitUtility;
 
 public class QALegend_ItemsPage {
 	WebDriver driver;
+	PageUtility page_Util=new PageUtility();
+	WaitUtility wait_Util=new WaitUtility();
 	@FindBy(xpath = "//a[text()=' Add item']")
 	WebElement addItems;
 	
@@ -36,27 +39,28 @@ public class QALegend_ItemsPage {
 	}
 
 	public void clickOnAddItems() {
-		PageUtility.clickOnElement(addItems);
+		page_Util.clickOnElement(addItems);
 	}
 	
 	public void inputTitleField(String msg) {
-		PageUtility.enterText(inputTitle, msg);
+		page_Util.enterText(inputTitle, msg);
 	}
 	public void inputDescriptionField(String msg) {
-		PageUtility.enterText(inputDescription, msg);
+		page_Util.enterText(inputDescription, msg);
 	}
 	public void enterUnitTypeField(String msg) {
-		PageUtility.enterText(enterUnitType, msg);
+		page_Util.enterText(enterUnitType, msg);
 	}
 	public void enterItemRateField(String msg) {
-		PageUtility.enterText(enterItemRate,msg);
+		page_Util.enterText(enterItemRate,msg);
 		
 	}
 	public void pressSaveButton() {
-		PageUtility.clickOnElement(saveButton);
+		wait_Util.waitForAnElementToBeVisible(driver, saveButton);
+		page_Util.clickOnElement(saveButton);
 	}
 	public String displayItem() {
-		return PageUtility.getTextFromElement(itemView);
+		return page_Util.getTextFromElement(itemView);
 	}
 }
 

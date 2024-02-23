@@ -6,10 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtility;
+import Utilities.WaitUtility;
 
 public class QALegend_TimeCards {
 	WebDriver driver;
-	
+	PageUtility page_Util=new PageUtility();
+	WaitUtility wait_Util=new WaitUtility();
 	
 	@FindBy(xpath = "//a[text()='Clock In / Out']")
 	WebElement clockInOrOut;
@@ -30,13 +32,14 @@ public class QALegend_TimeCards {
 		PageFactory.initElements(driver,this);
 	}
 	public void clickOnClockInOrOut() {
-		PageUtility.clickOnElement(clockInOrOut);
+		wait_Util.waitForAnElementToBeClickable(driver, clockInOrOut);
+		page_Util.clickOnElement(clockInOrOut);
 	}
 	
 	public void clickOnStatusOfKeerthana() {
-		PageUtility.clickOnElement(detailStatusOfKeerthana);
+		page_Util.clickOnElement(detailStatusOfKeerthana);
 	}
 	public String getTotalWorkHours() {
-		return PageUtility.getTextFromElement(totalWorkHours);
+		return page_Util.getTextFromElement(totalWorkHours);
 	}
 }

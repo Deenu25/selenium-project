@@ -1,18 +1,16 @@
 package PageClasses;
 
-import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import Utilities.PageUtility;
+import Utilities.WaitUtility;
 
 public class QALegend_LoginPage {
 	WebDriver driver;
+	PageUtility page_Util=new PageUtility();
+	WaitUtility wait_Util=new WaitUtility();
 	@FindBy(id="email")
 	WebElement userNamefield;
 	
@@ -30,17 +28,23 @@ public class QALegend_LoginPage {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
+public void loginCRM(String username,String password) {
+        
+        enterUserName(username);
+        enterPassword(password);
+        clickLoginButton();
+       
+    }
 
 	public void enterUserName(String username)
 	{
-     WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(2)); // Wait for 10 seconds
-    wait.until(ExpectedConditions.visibilityOf(userNamefield)); 
-    PageUtility.enterText(userNamefield, username);
+     wait_Util.waitForAnElementToBeVisible(driver, userNamefield);
+    page_Util.enterText(userNamefield, username);
 		
 	}
 
 	public void enterPassword(String password) {
-        PageUtility.enterText(passwordField, password);
+        page_Util.enterText(passwordField, password);
     }
 
     public void clickLoginButton() 

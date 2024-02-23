@@ -1,18 +1,17 @@
 package PageClasses;
 
-import java.awt.AWTException;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.v118.page.Page;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtility;
+import Utilities.WaitUtility;
 
 public class QALegend_FinancePage {
 	WebDriver driver;
-	
+	PageUtility page_Util=new PageUtility();
+	WaitUtility wait_Util=new WaitUtility();
 	
 	@FindBy(xpath = "//a[text()='Chart']")
 	WebElement chart;
@@ -44,25 +43,28 @@ public class QALegend_FinancePage {
 	
 	
 	public void chartVisibility() {
-		PageUtility.isElementDisplayed(chart);
+		wait_Util.waitForAnElementToBeVisible(driver, chart);
+		page_Util.isElementDisplayed(chart);
 		
 	}
 	 public void clickOnSummary() {
-		 PageUtility.clickOnElement(summaryOfChart);
+		 page_Util.clickOnElement(summaryOfChart);
 		  }
 	 public void clickSummaryTable() {
-		 PageUtility.clickOnElement(summaryTable);
+		 wait_Util.waitForAnElementToBeClickable(driver, summaryTable);
+		 page_Util.clickOnElement(summaryTable);
 	 }
     public void clickOnPrintSummary() {
-    	PageUtility.clickOnElement(printSummary);
+    	wait_Util.waitForAnElementToBeClickable(driver, printSummary);
+    	page_Util.clickOnElement(printSummary);
     }
     
     public void printView() {
-    	PageUtility.isElementDisplayed(printView);
+    	page_Util.isElementDisplayed(printView);
     }
     public String getTextVisible()
 	{
-		return PageUtility.getTextFromElement(textvisible);
+		return page_Util.getTextFromElement(textvisible);
 		
 	
 	}

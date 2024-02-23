@@ -2,19 +2,19 @@ package PageClasses;
 
 import java.util.Properties;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtility;
-import dev.failsafe.internal.util.Assert;
+import Utilities.WaitUtility;
 
 public class QALegend_HomePage {
     WebDriver driver;
     Properties properties;
-    
+    PageUtility page_Util=new PageUtility();
+    WaitUtility wait_Util=new WaitUtility();
     @FindBy(xpath = "//span[@class='topbar-user-name']")
     WebElement userProfileName;
     
@@ -76,70 +76,78 @@ public class QALegend_HomePage {
     
 
 	public void logOut() {
-        PageUtility.clickOnElement(userProfileName);
-        PageUtility.clickOnElement(signOutUser);
+        page_Util.clickOnElement(userProfileName);
+        page_Util.clickOnElement(signOutUser);
     }
     
     public String getUserProfileName() {
-        String userName = PageUtility.getTextFromElement(userProfileName);
+        String userName = page_Util.getTextFromElement(userProfileName);
         return userName;
     }
     public void navigateToHomePage() {
         
-        PageUtility.clickOnElement(logo);
+        page_Util.clickOnElement(logo);
     }
     public void clickOnEventTab() {
-    	PageUtility.clickOnElement(eventTab);
+    	page_Util.clickOnElement(eventTab);
     }
 public void clickOnChatBox() {
-	PageUtility.clickOnElement(chatBox);
+	wait_Util.waitForAnElementToBeClickable(driver,chatBox);
+	page_Util.clickOnElement(chatBox);
 }
 public void clickOnSenderMessage() {
-	PageUtility.clickOnElement(senderMessage);
+	page_Util.clickOnElement(senderMessage);
 }
 public void getReplyMessage(String message) {
-    PageUtility.enterText(replyMessage, message);
+    page_Util.enterText(replyMessage, message);
     
 }
 
 public String displayRepliedMessage(String placeholder) {
-    return PageUtility.getAttributeValue(placeholderReplyMsg,placeholder);
+    return page_Util.getAttributeValue(placeholderReplyMsg,placeholder);
 }
  
    public void pressEnterKey() {
-	   PageUtility.pressEnterKey(driver);
+	   wait_Util.waitForAnElementToBeClickable(driver,chatBox);
+	   page_Util.pressEnterKey(driver);
    }
 	
 	public void clickOnFinance() {
-		PageUtility.clickOnElement(financeTab);
+		wait_Util.waitForAnElementToBeClickable(driver,financeTab);
+		page_Util.clickOnElement(financeTab);
 	}
 	public void clickOnIncomeVsExpenses() {
-		PageUtility.moveToElement(driver, incomeVsExpensesTab);
-		PageUtility.clickOnElement(incomeVsExpensesTab);
+		page_Util.moveToElement(driver, incomeVsExpensesTab);
+		page_Util.clickOnElement(incomeVsExpensesTab);
 	}
 	
 	public void clickOnProject() {
-		PageUtility.clickOnElement(projectTab);
-		PageUtility.clickOnElement(allProjects);
+		wait_Util.waitForAnElementToBeClickable(driver, projectTab);
+		page_Util.clickOnElement(projectTab);
+		page_Util.clickOnElement(allProjects);
 	}
 	public void clickOnItemsTab() {
-		PageUtility.clickOnElement(itemsTab);
+		wait_Util.waitForAnElementToBeClickable(driver, itemsTab);
+		page_Util.clickOnElement(itemsTab);
 	}
 	public void clickOnTimeCards() {
-		PageUtility.clickOnElement(timeCardsTab);
+		page_Util.clickOnElement(timeCardsTab);
 	}
 
 public void clickOnTicketsTab() {
-	PageUtility.clickOnElement(ticketsTab);
+	page_Util.clickOnElement(ticketsTab);
 }
 
 	public void clickOnLeaveTab() {
-		PageUtility.scrollToElement(driver,leaveTab);
-		PageUtility.clickOnElement(leaveTab);
+		
+		page_Util.scrollToElement(driver,leaveTab);
+		wait_Util.waitForAnElementToBeClickable(driver, leaveTab);
+		page_Util.clickOnElement(leaveTab);
 	}
 	public void clickOnannouncementTab() {
-		PageUtility.scrollToElement(driver, announcementTab);
-		PageUtility.clickOnElement(announcementTab);
+		page_Util.scrollToElement(driver, announcementTab);
+		wait_Util.waitForAnElementToBeClickable(driver, announcementTab);
+		page_Util.clickOnElement(announcementTab);
 	}
 	
 }

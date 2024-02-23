@@ -7,10 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import Utilities.PageUtility;
+import Utilities.WaitUtility;
 
 public class QALegend_ProjectPage {
 	WebDriver driver;
-	
+	PageUtility page_Util=new PageUtility();
+	WaitUtility wait_Util=new WaitUtility();
 	@FindBy(xpath = "(//span[@class='caret'])[2]")
 	WebElement statusOfProjects;
 	@FindBy(xpath = "//li[text()='Completed']")
@@ -29,15 +31,15 @@ public class QALegend_ProjectPage {
 	}
 
 	public void clickOnProjectStatus() {
-		PageUtility.clickOnElement(statusOfProjects);
+		page_Util.clickOnElement(statusOfProjects);
 	}
 	public void clickOnCompletedProject() {
-		PageUtility.clickOnElement(completedProject);
+		page_Util.clickOnElement(completedProject);
 	}
 	public void clickOnExcel() {
-        PageUtility.clickOnElement(projectExcel);
+        page_Util.clickOnElement(projectExcel);
 	}
 	public String displayProjectText() {
-		 return PageUtility.getTextFromElement(projectText);
+		 return page_Util.getTextFromElement(projectText);
 	}
 }

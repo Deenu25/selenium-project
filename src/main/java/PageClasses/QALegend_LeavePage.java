@@ -6,11 +6,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtility;
+import Utilities.WaitUtility;
 
 public class QALegend_LeavePage {
 	
 WebDriver driver;
-
+PageUtility page_Util=new PageUtility();
+WaitUtility wait_Util=new WaitUtility();
 @FindBy(xpath = "//a[text()=' Apply leave']")
 WebElement applyLeave;
 
@@ -49,33 +51,33 @@ public QALegend_LeavePage(WebDriver driver) {
 }
 
 public void clickOnApplyLeave() {
-	PageUtility.clickOnElement(applyLeave);
+	page_Util.clickOnElement(applyLeave);
 }
 
 public void clickOnLeaveType() {
-	PageUtility.clickOnElement(leaveType);
+	page_Util.clickOnElement(leaveType);
 }
 public void selectLeaveType() {
 	
-	PageUtility.clickOnElement(casualLeave);
+	page_Util.clickOnElement(casualLeave);
 }
 public void radioButtonSelect() {
-	PageUtility.clickOnRadioButton(singleDay);
+	page_Util.clickOnRadioButton(singleDay);
 }
 	public void clickOnDate() {
-		PageUtility.clickOnElement(dateLabel);
+		page_Util.clickOnElement(dateLabel);
 	}
 	public void clickOnSelectDate() {
-		PageUtility.clickOnElement(selectDate);;
+		page_Util.clickOnElement(selectDate);;
 	}
 	public void enterReasonForLeave() {
-		PageUtility.enterText(reasonForLeave, "Family Event");
+		page_Util.enterText(reasonForLeave, "Family Event");
 	}
 	public void clickOnApplyLeaveButton() {
-		PageUtility.clickOnElement(applyLeaveButton);
+		page_Util.clickOnElement(applyLeaveButton);
 	}
 	public String leaveTextDisplay() {
-		return PageUtility.getTextFromElement(leaveView);
+		return page_Util.getTextFromElement(leaveView);
 	}
 }
 

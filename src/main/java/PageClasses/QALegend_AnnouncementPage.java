@@ -6,10 +6,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtility;
+import Utilities.WaitUtility;
 
 public class QALegend_AnnouncementPage {
 	
 WebDriver driver;
+PageUtility page_Util=new PageUtility();
+WaitUtility wait_Util=new WaitUtility();
+
 @FindBy(xpath = "//a[text()=' Add announcement']")
 WebElement addAnnouncement;
  @FindBy(id = "title")
@@ -54,46 +58,47 @@ public QALegend_AnnouncementPage(WebDriver driver) {
 	PageFactory.initElements(driver,this);
 }
 	public void clickOnAddAnnouncement() {
-		PageUtility.clickOnElement(addAnnouncement);
+		page_Util.clickOnElement(addAnnouncement);
 	}
 	public void enterTitle() {
-		PageUtility.enterText(enterTitle, "Test Automation");
+		page_Util.enterText(enterTitle, "Test Automation");
 	}
 	public void enterBodyOfAnnouncement() {
-		PageUtility.enterText(textBody, "Test cases should be Automated");
+		page_Util.enterText(textBody, "Test cases should be Automated");
 	}
 	public void clickOnStartDate() {
-		PageUtility.clickOnElement(startDate);
+		page_Util.clickOnElement(startDate);
 	}
 	public void clickOnSelectStartDate() {
-		PageUtility.clickOnElement(selectStartDate);
+		page_Util.clickOnElement(selectStartDate);
 	}
 	public void clickOnEndDate() {
-		PageUtility.clickOnElement(endDate);
+		page_Util.clickOnElement(endDate);
 	}
 	public void clickOnSelectEndDate() {
-		PageUtility.clickOnElement(selectEndDate);
+		page_Util.clickOnElement(selectEndDate);
 	}
 	public void selectCheckBox() {
-		PageUtility.clickOnCheckBox(checkBox);
+		page_Util.clickOnCheckBox(checkBox);
 	}
 	public void clickFileUpload(){
-		PageUtility.scrollToElement(driver, uploadFile);
-		PageUtility.clickOnElement(uploadFile);
+		page_Util.scrollToElement(driver, uploadFile);
+		wait_Util.waitForAnElementToBeClickable(driver, uploadFile);
+		page_Util.clickOnElement(uploadFile);
 	}
 	public void uploadFile(String filePath) {
-		PageUtility.uploadFileWithRobot("C:\\Users\\Administrator\\Desktop\\JAVA\\All-Java-components-Diagram.png");
+		page_Util.uploadFileWithRobot("C:\\Users\\Administrator\\Desktop\\JAVA\\All-Java-components-Diagram.png");
 	}
 	public void clickOnAlert() {
-		PageUtility.clickOnElement(alertMark);
+		alertMark.click();
 	}
 	public void clickSave() {
-		PageUtility.scrollToElement(driver,saveButton);
-		PageUtility.clickOnElement(saveButton);
+		page_Util.scrollToElement(driver,saveButton);
+		page_Util.clickOnElement(saveButton);
 	}
 	
 	public String displayEditAnnouncement() {
-		return PageUtility.getTextFromElement(editAnnouncement);
+		return page_Util.getTextFromElement(editAnnouncement);
 	}
 }
 

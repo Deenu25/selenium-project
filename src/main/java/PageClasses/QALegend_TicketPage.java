@@ -7,11 +7,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.PageFactoryFinder;
 
 import Utilities.PageUtility;
+import Utilities.WaitUtility;
 
 public class QALegend_TicketPage {
 	
 WebDriver driver;
- 
+PageUtility page_Util=new PageUtility();
+WaitUtility wait_Util=new WaitUtility();
  @FindBy(xpath = "//a[text()=' Add ticket']")
  WebElement addTickets;
  @FindBy(name = "title")
@@ -47,40 +49,42 @@ public QALegend_TicketPage(WebDriver driver) {
 }
 	
 	public void clickOnAddTickets() {
-		PageUtility.clickOnElement(addTickets);
+		page_Util.clickOnElement(addTickets);
 	}
 	
 	public void inputTitle(String message) {
-		PageUtility.enterText(insertTitle, "Ticket Test");
+		page_Util.enterText(insertTitle, "Ticket Test");
 		}
 	public void addClientTab() {
-		PageUtility.clickOnElement(addClient);
+		wait_Util.waitForAnElementToBeClickable(driver, addClient);
+		page_Util.clickOnElement(addClient);
 	}
 	public void clickOnAddClient() {
-		PageUtility.clickOnElement(clickAddClient);
+		page_Util.clickOnElement(clickAddClient);
 	}
 	public void clickSelectClient() {
-		PageUtility.clickOnElement(selectClient);
+		page_Util.clickOnElement(selectClient);
 	}
 	public void clickOnDescription() {
-		PageUtility.clickOnElement(descriptionBox);
+		page_Util.clickOnElement(descriptionBox);
 	}
 	public void insertDescrition(String message) {
-		PageUtility.enterText(descriptionBox, "Ticket Description");
+		page_Util.enterText(descriptionBox, "Ticket Description");
 	}
 	public void clickOnFileUpload() {
-		PageUtility.clickOnElement(uploadFile);
+		page_Util.clickOnElement(uploadFile);
 	}
 	
 	public void fileUpload(String filePath) {
-		PageUtility.uploadFileWithRobot("C:\\Users\\Administrator\\Desktop\\JAVA\\All-Java-components-Diagram.png");
+		wait_Util.waitForAnElementToBeClickable(driver,uploadFile);
+		page_Util.uploadFileWithRobot("C:\\Users\\Administrator\\Desktop\\JAVA\\All-Java-components-Diagram.png");
 	}
 
 	public void clickSaveButton() {
-		PageUtility.clickOnElement(saveButton);
+		page_Util.clickOnElement(saveButton);
 	}
 	public String openStatus() {
-		return PageUtility.getTextFromElement(statusOpen);
+		return page_Util.getTextFromElement(statusOpen);
 	}
 }
 

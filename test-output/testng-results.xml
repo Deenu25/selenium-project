@@ -1,57 +1,651 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="8" total="10" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="18" passed="14" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-13T18:37:05 GST" name="Suite" finished-at="2024-02-13T18:37:34 GST" duration-ms="28875">
+  <suite started-at="2024-02-23T15:13:28 GST" name="Suite" finished-at="2024-02-23T15:15:41 GST" duration-ms="133407">
     <groups>
       <group name="Regression">
-        <method signature="QALegendTestCases.loginCRM()[pri:1, instance:TestCases.QALegendTestCases@b62d79]" name="loginCRM" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.applyLeave()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" name="applyLeave" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.clockInOrOutMembers()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" name="clockInOrOutMembers" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.testChatBoxFunctionality()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" name="testChatBoxFunctionality" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.applyLeave()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" name="applyLeave" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.clockInOrOutMembers()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" name="clockInOrOutMembers" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.testChatBoxFunctionality()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" name="testChatBoxFunctionality" class="TestCases.QALegendTestCases"/>
       </group> <!-- Regression -->
-      <group name="Smoketest">
-        <method signature="QALegendTestCases.addEvent()[pri:8, instance:TestCases.QALegendTestCases@b62d79]" name="addEvent" class="TestCases.QALegendTestCases"/>
-      </group> <!-- Smoketest -->
+      <group name="Smoke">
+        <method signature="QALegendTestCases.Tickets()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" name="Tickets" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.addAnnouncement()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" name="addAnnouncement" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.addEvent()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" name="addEvent" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.addItems()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" name="addItems" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.incomeVsExpenses()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" name="incomeVsExpenses" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.Tickets()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" name="Tickets" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.addAnnouncement()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" name="addAnnouncement" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.addEvent()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" name="addEvent" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.addItems()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" name="addItems" class="TestCases.QALegendTestCases"/>
+        <method signature="QALegendTestCases.incomeVsExpenses()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" name="incomeVsExpenses" class="TestCases.QALegendTestCases"/>
+      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2024-02-13T18:37:05 GST" name="Test" finished-at="2024-02-13T18:37:34 GST" duration-ms="28875">
+    <test started-at="2024-02-23T15:13:28 GST" name="Test1" finished-at="2024-02-23T15:15:33 GST" duration-ms="125321">
       <class name="TestCases.QALegendTestCases">
-        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@b62d79]" started-at="2024-02-13T18:37:05 GST" name="initialization" finished-at="2024-02-13T18:37:15 GST" duration-ms="9775" status="PASS">
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:13:28 GST" name="initialization" finished-at="2024-02-23T15:13:36 GST" duration-ms="8679" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[Edge]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="loginCRM()[pri:1, instance:TestCases.QALegendTestCases@b62d79]" started-at="2024-02-13T18:37:15 GST" name="loginCRM" finished-at="2024-02-13T18:37:17 GST" duration-ms="2142" status="PASS">
+        <test-method signature="Tickets()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:13:36 GST" name="Tickets" finished-at="2024-02-23T15:13:43 GST" duration-ms="7189" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginCRM -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@b62d79]" started-at="2024-02-13T18:37:17 GST" name="tearDown" finished-at="2024-02-13T18:37:17 GST" duration-ms="240" status="PASS">
+        </test-method> <!-- Tickets -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:13:43 GST" name="tearDown" finished-at="2024-02-23T15:13:45 GST" duration-ms="1238" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@b62d79]" started-at="2024-02-13T18:37:17 GST" name="initialization" finished-at="2024-02-13T18:37:26 GST" duration-ms="8959" status="PASS">
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:13:45 GST" name="initialization" finished-at="2024-02-23T15:13:52 GST" duration-ms="7628" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[Edge]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method signature="addEvent()[pri:8, instance:TestCases.QALegendTestCases@b62d79]" started-at="2024-02-13T18:37:26 GST" name="addEvent" finished-at="2024-02-13T18:37:33 GST" duration-ms="6884" status="PASS">
+        <test-method signature="addAnnouncement()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:13:52 GST" name="addAnnouncement" finished-at="2024-02-23T15:14:02 GST" duration-ms="9335" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: MicrosoftEdge=121.0.2277.128)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [ca9778215042cb5b41fd82aedd617298, clickElement {id=153EC1F056B65E4D9EF2E5BEEF253842_element_185}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 121.0.2277.128, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:56661}, msedge: {msedgedriverVersion: 121.0.2277.128 (33d347b6876..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56661/devtoo..., se:cdpVersion: 121.0.2277.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (ca9778215042cb5b41fd82aedd617298)] -> xpath: //span[text()='×']]
+Session ID: ca9778215042cb5b41fd82aedd617298]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: MicrosoftEdge=121.0.2277.128)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [ca9778215042cb5b41fd82aedd617298, clickElement {id=153EC1F056B65E4D9EF2E5BEEF253842_element_185}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 121.0.2277.128, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:56661}, msedge: {msedgedriverVersion: 121.0.2277.128 (33d347b6876..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56661/devtoo..., se:cdpVersion: 121.0.2277.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (ca9778215042cb5b41fd82aedd617298)] -> xpath: //span[text()='×']]
+Session ID: ca9778215042cb5b41fd82aedd617298
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at PageClasses.QALegend_AnnouncementPage.clickOnAlert(QALegend_AnnouncementPage.java:93)
+at TestCases.QALegendTestCases.addAnnouncement(QALegendTestCases.java:231)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addAnnouncement -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:14:02 GST" name="tearDown" finished-at="2024-02-23T15:14:03 GST" duration-ms="1268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:14:03 GST" name="initialization" finished-at="2024-02-23T15:14:09 GST" duration-ms="6067" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="addEvent()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:14:09 GST" name="addEvent" finished-at="2024-02-23T15:14:16 GST" duration-ms="6627" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"*[name='title']"}
+  (Session info: MicrosoftEdge=121.0.2277.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [9ba2f58edbbd16db450f333ec30167c4, findElement {using=name, value=title}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 121.0.2277.128, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:56715}, msedge: {msedgedriverVersion: 121.0.2277.128 (33d347b6876..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56715/devtoo..., se:cdpVersion: 121.0.2277.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9ba2f58edbbd16db450f333ec30167c4]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='title']"}
+  (Session info: MicrosoftEdge=121.0.2277.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [9ba2f58edbbd16db450f333ec30167c4, findElement {using=name, value=title}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 121.0.2277.128, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:56715}, msedge: {msedgedriverVersion: 121.0.2277.128 (33d347b6876..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56715/devtoo..., se:cdpVersion: 121.0.2277.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9ba2f58edbbd16db450f333ec30167c4
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
+at PageClasses.QALegend_EventPage.inputTitle(QALegend_EventPage.java:66)
+at TestCases.QALegendTestCases.addEvent(QALegendTestCases.java:86)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addEvent -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@b62d79]" started-at="2024-02-13T18:37:33 GST" name="tearDown" finished-at="2024-02-13T18:37:34 GST" duration-ms="847" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:14:16 GST" name="tearDown" finished-at="2024-02-23T15:14:16 GST" duration-ms="450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:14:16 GST" name="initialization" finished-at="2024-02-23T15:14:25 GST" duration-ms="8493" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="addItems()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:14:25 GST" name="addItems" finished-at="2024-02-23T15:14:29 GST" duration-ms="4537" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addItems -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:14:29 GST" name="tearDown" finished-at="2024-02-23T15:14:30 GST" duration-ms="473" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:14:30 GST" name="initialization" finished-at="2024-02-23T15:14:37 GST" duration-ms="6752" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="applyLeave()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:14:37 GST" name="applyLeave" finished-at="2024-02-23T15:14:41 GST" duration-ms="4502" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- applyLeave -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:14:41 GST" name="tearDown" finished-at="2024-02-23T15:14:42 GST" duration-ms="541" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:14:42 GST" name="initialization" finished-at="2024-02-23T15:14:49 GST" duration-ms="6848" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="clockInOrOutMembers()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:14:49 GST" name="clockInOrOutMembers" finished-at="2024-02-23T15:14:53 GST" duration-ms="4105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clockInOrOutMembers -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:14:53 GST" name="tearDown" finished-at="2024-02-23T15:14:53 GST" duration-ms="478" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:14:53 GST" name="initialization" finished-at="2024-02-23T15:15:00 GST" duration-ms="6939" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="incomeVsExpenses()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:15:00 GST" name="incomeVsExpenses" finished-at="2024-02-23T15:15:09 GST" duration-ms="8782" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- incomeVsExpenses -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:15:09 GST" name="tearDown" finished-at="2024-02-23T15:15:09 GST" duration-ms="495" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:15:09 GST" name="initialization" finished-at="2024-02-23T15:15:17 GST" duration-ms="7209" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="projectStatusDropdown()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:15:17 GST" name="projectStatusDropdown" finished-at="2024-02-23T15:15:20 GST" duration-ms="3061" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- projectStatusDropdown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:15:20 GST" name="tearDown" finished-at="2024-02-23T15:15:20 GST" duration-ms="450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:15:20 GST" name="initialization" finished-at="2024-02-23T15:15:27 GST" duration-ms="7255" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="testChatBoxFunctionality()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:15:27 GST" name="testChatBoxFunctionality" finished-at="2024-02-23T15:15:32 GST" duration-ms="4619" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testChatBoxFunctionality -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@48f278eb]" started-at="2024-02-23T15:15:32 GST" name="tearDown" finished-at="2024-02-23T15:15:33 GST" duration-ms="920" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- TestCases.QALegendTestCases -->
-    </test> <!-- Test -->
+    </test> <!-- Test1 -->
+    <test started-at="2024-02-23T15:13:28 GST" name="Test2" finished-at="2024-02-23T15:15:41 GST" duration-ms="133407">
+      <class name="TestCases.QALegendTestCases">
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:13:28 GST" name="initialization" finished-at="2024-02-23T15:13:35 GST" duration-ms="7582" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="Tickets()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:13:35 GST" name="Tickets" finished-at="2024-02-23T15:13:42 GST" duration-ms="6923" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tickets -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:13:42 GST" name="tearDown" finished-at="2024-02-23T15:13:43 GST" duration-ms="530" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:13:43 GST" name="initialization" finished-at="2024-02-23T15:13:50 GST" duration-ms="7350" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="addAnnouncement()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:13:50 GST" name="addAnnouncement" finished-at="2024-02-23T15:14:00 GST" duration-ms="9942" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=121.0.6167.185)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [67d602cddafae6aa836fe42a31b6088b, clickElement {id=B11EF35D606C19ED4AB82D88BDA2DE54_element_207}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.185, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56646}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56646/devtoo..., se:cdpVersion: 121.0.6167.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (67d602cddafae6aa836fe42a31b6088b)] -> xpath: //span[text()='×']]
+Session ID: 67d602cddafae6aa836fe42a31b6088b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=121.0.6167.185)
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [67d602cddafae6aa836fe42a31b6088b, clickElement {id=B11EF35D606C19ED4AB82D88BDA2DE54_element_207}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.185, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56646}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56646/devtoo..., se:cdpVersion: 121.0.6167.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (67d602cddafae6aa836fe42a31b6088b)] -> xpath: //span[text()='×']]
+Session ID: 67d602cddafae6aa836fe42a31b6088b
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at PageClasses.QALegend_AnnouncementPage.clickOnAlert(QALegend_AnnouncementPage.java:93)
+at TestCases.QALegendTestCases.addAnnouncement(QALegendTestCases.java:231)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addAnnouncement -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:14:00 GST" name="tearDown" finished-at="2024-02-23T15:14:01 GST" duration-ms="564" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:14:01 GST" name="initialization" finished-at="2024-02-23T15:14:06 GST" duration-ms="5047" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="addEvent()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:14:06 GST" name="addEvent" finished-at="2024-02-23T15:14:15 GST" duration-ms="8918" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"*[name='title']"}
+  (Session info: chrome=121.0.6167.185)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [62fe43fc620a924a04407c3087f71587, findElement {using=name, value=title}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.185, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56700}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56700/devtoo..., se:cdpVersion: 121.0.6167.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 62fe43fc620a924a04407c3087f71587]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='title']"}
+  (Session info: chrome=121.0.6167.185)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.0', revision: '15400459dd*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [62fe43fc620a924a04407c3087f71587, findElement {using=name, value=title}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.185, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56700}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56700/devtoo..., se:cdpVersion: 121.0.6167.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 62fe43fc620a924a04407c3087f71587
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
+at PageClasses.QALegend_EventPage.inputTitle(QALegend_EventPage.java:66)
+at TestCases.QALegendTestCases.addEvent(QALegendTestCases.java:86)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEvent -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:14:15 GST" name="tearDown" finished-at="2024-02-23T15:14:15 GST" duration-ms="416" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:14:15 GST" name="initialization" finished-at="2024-02-23T15:14:23 GST" duration-ms="7500" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="addItems()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:14:23 GST" name="addItems" finished-at="2024-02-23T15:14:28 GST" duration-ms="5220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addItems -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:14:28 GST" name="tearDown" finished-at="2024-02-23T15:14:29 GST" duration-ms="575" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:14:29 GST" name="initialization" finished-at="2024-02-23T15:14:36 GST" duration-ms="7356" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="applyLeave()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:14:36 GST" name="applyLeave" finished-at="2024-02-23T15:14:41 GST" duration-ms="4643" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- applyLeave -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:14:41 GST" name="tearDown" finished-at="2024-02-23T15:14:41 GST" duration-ms="563" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:14:41 GST" name="initialization" finished-at="2024-02-23T15:14:49 GST" duration-ms="7756" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="clockInOrOutMembers()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:14:49 GST" name="clockInOrOutMembers" finished-at="2024-02-23T15:14:54 GST" duration-ms="4923" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clockInOrOutMembers -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:14:54 GST" name="tearDown" finished-at="2024-02-23T15:14:54 GST" duration-ms="354" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:14:54 GST" name="initialization" finished-at="2024-02-23T15:15:02 GST" duration-ms="8213" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="incomeVsExpenses()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:15:02 GST" name="incomeVsExpenses" finished-at="2024-02-23T15:15:09 GST" duration-ms="6281" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- incomeVsExpenses -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:15:09 GST" name="tearDown" finished-at="2024-02-23T15:15:09 GST" duration-ms="418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:15:09 GST" name="initialization" finished-at="2024-02-23T15:15:20 GST" duration-ms="10456" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="projectStatusDropdown()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:15:20 GST" name="projectStatusDropdown" finished-at="2024-02-23T15:15:25 GST" duration-ms="5538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- projectStatusDropdown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:15:25 GST" name="tearDown" finished-at="2024-02-23T15:15:26 GST" duration-ms="853" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initialization(java.lang.String)[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:15:26 GST" name="initialization" finished-at="2024-02-23T15:15:37 GST" duration-ms="10560" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="testChatBoxFunctionality()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:15:37 GST" name="testChatBoxFunctionality" finished-at="2024-02-23T15:15:41 GST" duration-ms="4095" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testChatBoxFunctionality -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.QALegendTestCases@7d4f9aae]" started-at="2024-02-23T15:15:41 GST" name="tearDown" finished-at="2024-02-23T15:15:41 GST" duration-ms="333" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestCases.QALegendTestCases -->
+    </test> <!-- Test2 -->
   </suite> <!-- Suite -->
 </testng-results>

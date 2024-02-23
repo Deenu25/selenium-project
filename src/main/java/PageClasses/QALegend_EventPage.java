@@ -1,18 +1,17 @@
 package PageClasses;
 
-import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtility;
-import net.bytebuddy.asm.MemberSubstitution.FieldValue;
+import Utilities.WaitUtility;
 
 public class QALegend_EventPage {
 	WebDriver driver;
-	
+	PageUtility page_Util=new PageUtility();
+	WaitUtility wait_Util=new WaitUtility();
 	
 	@FindBy(xpath = "//div[@class='title-button-group']")
 	WebElement addEvent;
@@ -61,43 +60,43 @@ public class QALegend_EventPage {
 	
 
     public void clickOnAddEvent() {
-    	PageUtility.clickOnElement(addEvent);
+    	page_Util.clickOnElement(addEvent);
     }
     public void inputTitle(String message) {
-PageUtility.enterText(addTitle, "Automation Page");
+addTitle.sendKeys("Automation Page");
 }
      	
 public void inputDescription(String message) {
 		
-		PageUtility.enterText(addDescription, "This is Automated Page");
+		addDescription.sendKeys("This is Automated Page");
     
 	}
 public void clickOnStartDate() {
-	PageUtility.clickOnElement(startDate);
+	page_Util.clickOnElement(startDate);
 }
 public void enterStartDate() {
-	PageUtility.clickOnElement(enterStartDate);
+	page_Util.clickOnElement(enterStartDate);
 }
 public void clickOnEndDate() {
-	PageUtility.clickOnElement(endDate);
+	page_Util.clickOnElement(endDate);
 }
 public void enterEndDate() {
-	PageUtility.clickOnElement(enterEndDate);
+	page_Util.clickOnElement(enterEndDate);
 }
 public void inputLocation(String message) {
-	PageUtility.enterText(location, "Trvm");
+	page_Util.enterText(location, "Trvm");
 }
 
 
 public void selectShareWith() {
-	PageUtility.scrollToElement(driver, shareWith);
-	PageUtility.clickOnRadioButton(shareWith);
+	page_Util.scrollToElement(driver, shareWith);
+	page_Util.clickOnRadioButton(shareWith);
 }
 public void tickCheckBoxRepeat() {
-	PageUtility.clickOnCheckBox(repeat);
+	page_Util.clickOnCheckBox(repeat);
 }
 public void clickOnSave() {
-	PageUtility.clickOnElement(saveButton);
+	page_Util.clickOnElement(saveButton);
 }
 public String getTitleOfThePage()
 {

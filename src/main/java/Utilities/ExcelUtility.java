@@ -10,11 +10,11 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtility {
-	public static XSSFWorkbook wb;
-	 public static XSSFSheet sh;
-	 public static FileInputStream f;
+	public  XSSFWorkbook wb;
+	 public  XSSFSheet sh;
+	 public  FileInputStream f;
 	 
-	 public static String getString(int i, int j, String filePath,String sheet) throws IOException
+	 public  String getString(int i, int j, String filePath,String sheet) throws IOException
 	 {
 		 f =new FileInputStream(System.getProperty("user.dir")+ filePath);
 		 wb = new XSSFWorkbook(f);
@@ -25,7 +25,7 @@ public class ExcelUtility {
 		 
 	 }
 	 
-	 public static String getNumeric(int i, int j, String filePath,String sheet) throws IOException
+	 public  String getNumeric(int i, int j, String filePath,String sheet) throws IOException
 	 {
 		 f =new FileInputStream(System.getProperty("user.dir")+ filePath);
 		 wb = new XSSFWorkbook(f);
@@ -37,7 +37,7 @@ public class ExcelUtility {
 		 
 	 }
 	 
-	 public static ArrayList<String> getString(String filePath,String sheet) throws IOException {
+	 public  ArrayList<String> getString(String filePath,String sheet) throws IOException {
 		 f =new FileInputStream(System.getProperty("user.dir")+ filePath);
 		 wb = new XSSFWorkbook(f);
 		 sh = wb.getSheet(sheet);
